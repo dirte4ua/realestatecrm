@@ -10,7 +10,7 @@ echo "🚀 Starting deployment..."
 
 # Configuration
 APP_DIR="/var/www/realestatecrm"
-REPO_URL="YOUR_GITHUB_REPO_URL"  # Update this
+REPO_URL="git@github.com:dirte4ua/realestatecrm.git"
 DOMAIN="realestatecrm.stackforgeit.com"
 
 # Update system
@@ -112,7 +112,27 @@ echo "🔒 Installing SSL certificate..."
 if ! command -v certbot &> /dev/null; then
     sudo apt-get install -y certbot python3-certbot-nginx
 fi
-sudo certbot --nginx -d $DOMAIN --non-interactive --agree-tos --email stephan.reese@gmail.com
+
+# Wait for DNS propagation
+echo "⏳ Checking DNS propagation..."
+MAX_ATTEMPTS=30
+ATTEMPT=0
+while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
+    if host $DOMAIN | grep -q "159.203.136.140"; then
+        echo "✅ DNS resolved correctly"
+        break
+    fi
+    echo "⏳ Waiting for DNS to propagate... (attempt $((ATTEMPT+1))/$MAX_ATTEMPTS)"
+    sleep 10
+    ATTEMPT=$((ATTEMPT+1))
+done
+
+if [ $ATTEMPT -eq $MAX_ATTEMPTS ]; then
+    echo "⚠️  DNS not fully propagated. You can run this later:"
+    echo "    sudo certbot --nginx -d $DOMAIN --non-interactive --agree-tos --email stephan.reese@gmail.com"
+else
+    sudo certbot --nginx -d $DOMAIN --non-interactive --agree-tos --email stephan.reese@gmail.com --redirect
+fi
 
 echo "✅ Deployment complete!"
 echo "🌐 Your app should be live at: https://$DOMAIN"
