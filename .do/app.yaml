@@ -1,0 +1,31 @@
+name: re-crm
+services:
+- name: web
+  environment_slug: node-js
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: YOUR_GITHUB_USERNAME/re-crm-wkspc
+  build_command: npm run build
+  run_command: npm start
+  envs:
+  - key: DATABASE_URL
+    value: ${DATABASE_URL}
+    scope: RUN_AND_BUILD_TIME
+  - key: NEXTAUTH_SECRET
+    value: ${NEXTAUTH_SECRET}
+    scope: RUN_AND_BUILD_TIME
+  - key: NEXTAUTH_URL
+    value: https://realestatecrm.stackforgeit.com
+    scope: RUN_AND_BUILD_TIME
+  - key: NODE_ENV
+    value: production
+    scope: RUN_AND_BUILD_TIME
+  http_port: 3000
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  routes:
+  - path: /
+domains:
+- domain: realestatecrm.stackforgeit.com
+  type: PRIMARY
