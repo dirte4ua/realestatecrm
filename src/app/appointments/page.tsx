@@ -216,7 +216,8 @@ export default function AppointmentsPage() {
         });
     };
 
-    if (loading) return <div className="p-8">Loading...</div>;
+    if (status === 'loading' || loading) return <div className="p-8">Loading...</div>;
+    if (status === 'unauthenticated') return null;
 
     return (
         <div className="p-8">

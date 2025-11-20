@@ -114,13 +114,14 @@ export default function UsersPage() {
     }
   };
 
-  if (loading) {
+  if (status === 'loading' || loading) {
     return (
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <p className="text-gray-600 dark:text-gray-400">Loading...</p>
       </div>
     );
   }
+  if (status === 'unauthenticated') return null;
 
   if (error) {
     return (
