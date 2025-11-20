@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 type Stats = {
@@ -29,12 +31,19 @@ type Lead = {
 };
 
 export default function Dashboard() {
+  const { data: session, status } = useSession();
+  const router = useRouter();
   const [stats, setStats] = useState<Stats>({ properties: 0, clients: 0, leads: 0, appointments: 0 });
   const [upcomingAppointments, setUpcomingAppointments] = useState<Appointment[]>([]);
   const [recentLeads, setRecentLeads] = useState<Lead[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/login');
+      return;
+    }
+    if (status !== 'authenticated') return;
     const fetchData = async () => {
       const [propertiesRes, clientsRes, leadsRes, appointmentsRes] = await Promise.all([
         fetch('/api/properties'),
@@ -74,7 +83,7 @@ export default function Dashboard() {
     };
 
     fetchData();
-  }, []);
+  }, [status, router]);
 
   const formatDateTime = (dateString: string) => {
     const date = new Date(dateString);
