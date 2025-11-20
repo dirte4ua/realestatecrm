@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
 interface User {
@@ -13,14 +14,21 @@ interface User {
 }
 
 export default function UsersPage() {
+  const { status } = useSession();
   const router = useRouter();
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchUsers();
-  }, []);
+    if (status === 'unauthenticated') {
+      router.push('/login');
+      return;
+    }
+    if (status === 'authenticated') {
+      fetchUsers();
+    }
+  }, [status, router]);
 
   const fetchUsers = async () => {
     try {

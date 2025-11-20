@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 type Property = {
     id: string;
@@ -18,7 +20,9 @@ type Property = {
 };
 
 export default function PropertiesPage() {
-    const [properties, setProperties] = useState<Property[]>([]);
+  const { status } = useSession();
+  const router = useRouter();
+  const [properties, setProperties] = useState<Property[]>([]);
     const [loading, setLoading] = useState(true);
     const [editingId, setEditingId] = useState<string | null>(null);
     const [formData, setFormData] = useState({
@@ -42,8 +46,14 @@ export default function PropertiesPage() {
             setLoading(false);
         };
 
-        fetchProperties();
-    }, []);
+        if (status === 'unauthenticated') {
+            router.push('/login');
+            return;
+        }
+        if (status === 'authenticated') {
+            fetchProperties();
+        }
+    }, [status, router]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;

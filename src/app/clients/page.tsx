@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 type Client = {
     id: string;
@@ -13,7 +15,9 @@ type Client = {
 };
 
 export default function ClientsPage() {
-    const [clients, setClients] = useState<Client[]>([]);
+  const { status } = useSession();
+  const router = useRouter();
+  const [clients, setClients] = useState<Client[]>([]);
     const [loading, setLoading] = useState(true);
     const [editingId, setEditingId] = useState<string | null>(null);
     const [formData, setFormData] = useState({
@@ -31,8 +35,14 @@ export default function ClientsPage() {
             setClients(data);
             setLoading(false);
         }
-        fetchClients();
-    }, []);
+        if (status === 'unauthenticated') {
+            router.push('/login');
+            return;
+        }
+        if (status === 'authenticated') {
+            fetchClients();
+        }
+    }, [status, router]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;

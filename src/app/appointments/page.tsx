@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import TimePicker from '@/components/TimePicker';
 
 type Property = {
@@ -34,7 +36,9 @@ type Appointment = {
 };
 
 export default function AppointmentsPage() {
-    const [appointments, setAppointments] = useState<Appointment[]>([]);
+  const { status } = useSession();
+  const router = useRouter();
+  const [appointments, setAppointments] = useState<Appointment[]>([]);
     const [properties, setProperties] = useState<Property[]>([]);
     const [clients, setClients] = useState<Client[]>([]);
     const [leads, setLeads] = useState<Lead[]>([]);
@@ -77,8 +81,14 @@ export default function AppointmentsPage() {
             setLoading(false);
         };
 
-        fetchData();
-    }, []);
+        if (status === 'unauthenticated') {
+            router.push('/login');
+            return;
+        }
+        if (status === 'authenticated') {
+            fetchData();
+        }
+    }, [status, router]);
 
     const calculateEndTime = (startTime: string): string => {
         if (!startTime) return '';
