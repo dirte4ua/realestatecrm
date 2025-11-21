@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "MobileApp",
-    platforms: [.iOS("17.0")],
+    platforms: [.iOS("17.0"), .macOS("14.0")],
     products: [
         .executable(name: "MobileApp", targets: ["MobileApp"]),
     ],

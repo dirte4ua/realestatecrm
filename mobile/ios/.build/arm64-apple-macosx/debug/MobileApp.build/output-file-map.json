@@ -1,0 +1,68 @@
+{
+  "": {
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/master.swiftdeps"
+  },
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/ContentView.swift": {
+    "dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/ContentView.d",
+    "object": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/ContentView.swift.o",
+    "swiftmodule": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/ContentView.dia"
+  },
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/MobileApp.swift": {
+    "dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/MobileApp.d",
+    "object": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/MobileApp.swift.o",
+    "swiftmodule": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/MobileApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/MobileApp.swiftdeps",
+    "diagnostics": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/MobileApp.dia"
+  },
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Client.swift": {
+    "dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Client.d",
+    "object": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Client.swift.o",
+    "swiftmodule": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Client~partial.swiftmodule",
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Client.swiftdeps",
+    "diagnostics": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Client.dia"
+  },
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Property.swift": {
+    "dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Property.d",
+    "object": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Property.swift.o",
+    "swiftmodule": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Property~partial.swiftmodule",
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Property.swiftdeps",
+    "diagnostics": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Property.dia"
+  },
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/API.swift": {
+    "dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/API.d",
+    "object": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/API.swift.o",
+    "swiftmodule": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/API~partial.swiftmodule",
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/API.swiftdeps",
+    "diagnostics": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/API.dia"
+  },
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/AuthViewModel.swift": {
+    "dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel.d",
+    "object": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel.swift.o",
+    "swiftmodule": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel.swiftdeps",
+    "diagnostics": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel.dia"
+  },
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/KeychainHelper.swift": {
+    "dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper.d",
+    "object": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper.swift.o",
+    "swiftmodule": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper~partial.swiftmodule",
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper.swiftdeps",
+    "diagnostics": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper.dia"
+  },
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/SyncManager.swift": {
+    "dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/SyncManager.d",
+    "object": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/SyncManager.swift.o",
+    "swiftmodule": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/SyncManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/SyncManager.swiftdeps",
+    "diagnostics": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/SyncManager.dia"
+  },
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/LoginView.swift": {
+    "dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/LoginView.d",
+    "object": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/LoginView.swift.o",
+    "swiftmodule": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/LoginView~partial.swiftmodule",
+    "swift-dependencies": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/LoginView.swiftdeps",
+    "diagnostics": "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/LoginView.dia"
+  }
+}

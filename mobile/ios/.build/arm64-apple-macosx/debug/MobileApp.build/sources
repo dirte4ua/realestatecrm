@@ -1,0 +1,9 @@
+/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/ContentView.swift
+/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/MobileApp.swift
+/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Client.swift
+/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Property.swift
+/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/API.swift
+/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/AuthViewModel.swift
+/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/KeychainHelper.swift
+/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/SyncManager.swift
+/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/LoginView.swift

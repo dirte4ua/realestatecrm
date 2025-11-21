@@ -3,6 +3,18 @@ import Foundation
 enum APIError: Error {
     case invalidURL
     case invalidResponse
+    case serverError(String)
+    
+    var localizedDescription: String {
+        switch self {
+        case .invalidURL:
+            return "Invalid URL"
+        case .invalidResponse:
+            return "Invalid response from server"
+        case .serverError(let message):
+            return message
+        }
+    }
 }
 
 struct API {
@@ -39,11 +51,41 @@ struct API {
         req.httpBody = try JSONEncoder().encode(body)
 
         let (data, resp) = try await URLSession.shared.data(for: req)
-        guard let http = resp as? HTTPURLResponse, (200...299).contains(http.statusCode) else {
-            throw APIError.invalidResponse
+        guard let http = resp as? HTTPURLResponse else { throw APIError.invalidResponse }
+        
+        if !((200...299).contains(http.statusCode)) {
+            if let errorData = try? JSONDecoder().decode(ErrorResponse.self, from: data) {
+                throw APIError.serverError(errorData.error)
+            } else {
+                throw APIError.serverError("Login failed with status \(http.statusCode)")
+            }
         }
+        
         let parsed = try JSONDecoder().decode(SignInResponse.self, from: data)
         return (token: parsed.token, userId: parsed.user.id)
+    }
+    
+    static func signUp(name: String, email: String, password: String) async throws -> String {
+        guard let url = URL(string: "/api/auth/signup", relativeTo: baseURL) else { throw APIError.invalidURL }
+        var req = URLRequest(url: url)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let body = ["name": name, "email": email, "password": password]
+        req.httpBody = try JSONEncoder().encode(body)
+
+        let (data, resp) = try await URLSession.shared.data(for: req)
+        guard let http = resp as? HTTPURLResponse else { throw APIError.invalidResponse }
+        
+        if !((200...299).contains(http.statusCode)) {
+            if let errorData = try? JSONDecoder().decode(ErrorResponse.self, from: data) {
+                throw APIError.serverError(errorData.error)
+            } else {
+                throw APIError.serverError("Signup failed with status \(http.statusCode)")
+            }
+        }
+        
+        let parsed = try JSONDecoder().decode(SignUpResponse.self, from: data)
+        return parsed.message
     }
 }
 
@@ -78,4 +120,13 @@ struct SignInUser: Codable {
     let id: String
     let email: String
     let name: String
+}
+
+struct ErrorResponse: Codable {
+    let error: String
+}
+
+struct SignUpResponse: Codable {
+    let message: String
+    let user: SignInUser
 }

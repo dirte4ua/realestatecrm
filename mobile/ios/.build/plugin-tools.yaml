@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "MobileApp-arm64-apple-macosx26.0-debug.exe": ["<MobileApp-arm64-apple-macosx26.0-debug.exe>"]
+  "MobileApp-arm64-apple-macosx26.0-debug.module": ["<MobileApp-arm64-apple-macosx26.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<MobileApp-arm64-apple-macosx26.0-debug.exe>","<MobileApp-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<MobileApp-arm64-apple-macosx26.0-debug.exe>","<MobileApp-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp":
+    is-mutated: true
+commands:
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp-entitlement.plist"]
+    description: "Write auxiliary file /Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp-entitlement.plist"
+
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/ContentView.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/MobileApp.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Client.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Property.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/API.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/AuthViewModel.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/KeychainHelper.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/SyncManager.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/LoginView.swift"]
+    outputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/sources"]
+    description: "Write auxiliary file /Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/sources"
+
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/API.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Client.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/ContentView.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/LoginView.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/MobileApp.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Property.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/SyncManager.swift.o"]
+    outputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.product/Objects.LinkFileList"
+
+  "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<MobileApp-arm64-apple-macosx26.0-debug.exe>":
+    tool: phony
+    inputs: ["<MobileApp-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    outputs: ["<MobileApp-arm64-apple-macosx26.0-debug.exe>"]
+
+  "<MobileApp-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/ContentView.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/MobileApp.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Client.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Property.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/API.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/SyncManager.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/LoginView.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/Modules/MobileApp.swiftmodule"]
+    outputs: ["<MobileApp-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.MobileApp-arm64-apple-macosx26.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/API.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Client.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/ContentView.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/LoginView.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/MobileApp.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Property.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/SyncManager.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.product/Objects.LinkFileList"]
+    outputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/MobileApp"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug","-o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp","-module-name","MobileApp","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_MobileApp_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/Modules/MobileApp.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.MobileApp-arm64-apple-macosx26.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp-entitlement.plist"]
+    outputs: ["<MobileApp-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/MobileApp"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp-entitlement.plist","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp"]
+
+  "C.MobileApp-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/ContentView.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/MobileApp.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Client.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Property.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/API.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/AuthViewModel.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/KeychainHelper.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/SyncManager.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/LoginView.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/sources"]
+    outputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/ContentView.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/MobileApp.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Client.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/Property.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/API.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/SyncManager.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/LoginView.swift.o","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/Modules/MobileApp.swiftmodule"]
+    description: "Compiling Swift Module 'MobileApp' (9 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","MobileApp","-emit-dependencies","-emit-module","-emit-module-path","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/Modules/MobileApp.swiftmodule","-output-file-map","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/output-file-map.json","-incremental","-c","@/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/MobileApp.build/sources","-I","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/stephanreese/src/realestatecrm/mobile/ios/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","MobileApp_main","-color-diagnostics","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","ios"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/","/Users/stephanreese/src/realestatecrm/mobile/ios/Package.swift","/Users/stephanreese/src/realestatecrm/mobile/ios/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

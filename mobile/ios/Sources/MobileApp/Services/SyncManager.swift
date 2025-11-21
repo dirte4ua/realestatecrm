@@ -8,7 +8,8 @@ actor SyncManager {
         let fetched = try await API.fetchClients(token: token)
         for c in fetched {
             // upsert
-            if let existing = try modelContext.fetch(EntityQuery<Client>().filter(#Predicate { $0.id == c.id })).first {
+            let all = try modelContext.fetch(FetchDescriptor<Client>())
+            if let existing = all.first(where: { $0.id == c.id }) {
                 existing.name = c.name
                 existing.email = c.email
                 existing.phone = c.phone
@@ -24,7 +25,8 @@ actor SyncManager {
     func syncProperties(modelContext: ModelContext, token: String?) async throws {
         let fetched = try await API.fetchProperties(token: token)
         for p in fetched {
-            if let existing = try modelContext.fetch(EntityQuery<Property>().filter(#Predicate { $0.id == p.id })).first {
+            let all = try modelContext.fetch(FetchDescriptor<Property>())
+            if let existing = all.first(where: { $0.id == p.id }) {
                 existing.title = p.title
                 existing.descriptionText = p.description
                 existing.price = p.price

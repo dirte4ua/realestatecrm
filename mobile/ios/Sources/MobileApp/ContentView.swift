@@ -2,9 +2,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(
-        \._modelContext
-    ) private var modelContext
+    @Environment(\.modelContext) private var modelContext
 
     @StateObject private var auth = AuthViewModel()
 
@@ -14,12 +12,14 @@ struct ContentView: View {
                 if auth.isAuthenticated {
                     Button("Sync clients") {
                         Task {
-                            try? await SyncManager.shared.syncClients(modelContext: modelContext, token: auth.token)
+                            do { try await SyncManager.shared.syncClients(modelContext: modelContext, token: auth.token) }
+                            catch { print("Sync clients failed:", error) }
                         }
                     }
                     Button("Sync properties") {
                         Task {
-                            try? await SyncManager.shared.syncProperties(modelContext: modelContext, token: auth.token)
+                            do { try await SyncManager.shared.syncProperties(modelContext: modelContext, token: auth.token) }
+                            catch { print("Sync properties failed:", error) }
                         }
                     }
                     List {

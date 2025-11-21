@@ -1,0 +1,342 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.MobileApp-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/sources",
+      "importPath" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/MobileApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Client.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Property.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/API.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/AuthViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/KeychainHelper.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/SyncManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/LoginView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/SignUpView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "MobileApp",
+      "moduleOutputPath" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/Modules/MobileApp.swiftmodule",
+      "objects" : [
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/ContentView.swift.o",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/MobileApp.swift.o",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/Client.swift.o",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/Property.swift.o",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/API.swift.o",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/AuthViewModel.swift.o",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/KeychainHelper.swift.o",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/SyncManager.swift.o",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/LoginView.swift.o",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/SignUpView.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "MobileApp_main",
+        "-swift-version",
+        "5",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "ios"
+      ],
+      "outputFileMapPath" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/Modules/MobileApp.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/ContentView.swift",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/MobileApp.swift",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Client.swift",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Property.swift",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/API.swift",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/AuthViewModel.swift",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/KeychainHelper.swift",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/SyncManager.swift",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/LoginView.swift",
+        "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/SignUpView.swift"
+      ],
+      "tempsPath" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "MobileApp" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "MobileApp",
+      "-package-name",
+      "ios",
+      "-c",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/ContentView.swift",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/MobileApp.swift",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Client.swift",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Property.swift",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/API.swift",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/AuthViewModel.swift",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/KeychainHelper.swift",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/SyncManager.swift",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/LoginView.swift",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/SignUpView.swift",
+      "-I",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "MobileApp_main",
+      "-swift-version",
+      "5",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "ios",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "MobileApp" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/MobileApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Client.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Models/Property.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/API.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/AuthViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/KeychainHelper.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Services/SyncManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/LoginView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/stephanreese/src/realestatecrm/mobile/ios/Sources/MobileApp/Views/SignUpView.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/MobileApp.build/sources"
+    },
+    "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/stephanreese/src/realestatecrm/mobile/ios/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}
